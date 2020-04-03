@@ -2,7 +2,7 @@
 #include <cstring>
 
 using namespace std;
-// 1010 - 다리놓기
+// 1010 - 다리놓기 40min
 int N, M;
 int cache[31][31];
 
