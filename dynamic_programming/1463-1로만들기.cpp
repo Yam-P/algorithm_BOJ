@@ -3,6 +3,8 @@
 #include <cstring>
 
 using namespace std;
+
+// 1463 - 1로 만들기
 #define FOR(i, n) for(int i = 0; i < n; ++i)
 #define INF (987654321)
 #define MAX_SIZE (1000001)
@@ -10,8 +12,8 @@ using namespace std;
 int cache[MAX_SIZE];
 
 int makeOne(int N) {
-	if (N == 0) return 0; // 1을 만들지 못한 경우
-	if (N == 1) return 1;
+	if (N == 0) return INF; // 1을 만들지 못한 경우
+	if (N == 1) return 0;
 
 	int &ret = cache[N];
 	if (ret != -1) {
@@ -39,8 +41,7 @@ int main() {
 	cin >> N;
 	
 	memset(cache, -1, sizeof(cache));
-	// 1인 경우도 한번 세므로
-	cout << makeOne(N) - 1 << "\n";
+	cout << makeOne(N) << "\n";
 	
 	return 0;
 }
