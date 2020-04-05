@@ -7,13 +7,13 @@ using namespace std;
 // 1699 - 제곱수의 합
 int cache[100001];
 int squareSum(int num) {
+	if (num == 0) return 0; 
+
 	int &ret = cache[num];
 	if (ret != -1) {
 		//	printf("repeated case!\n");
 		return ret;
 	}
-
-	if (num == 0) return 0; 
 
 	ret = INF;
 	for(int i = 1; i * i <= num; ++i) {
