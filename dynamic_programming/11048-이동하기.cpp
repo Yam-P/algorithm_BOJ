@@ -3,6 +3,8 @@
 #include <cstring>
 
 using namespace std;
+
+// 11048 - 이동하기
 int N, M;
 int candy[1001][1001];
 int cache[1001][1001];
