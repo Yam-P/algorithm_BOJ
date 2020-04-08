@@ -2,11 +2,12 @@
 #include <cstring>
 
 using namespace std;
+
+// 1520 - 내리막길
 int N, M;
 int map[501][501];
 int cache[501][501];
 
-// 1520 - 내리막길
 int move(int y, int x) {
 	if (y < 0 || y >= N || x < 0 || x >= M) return 0;
 	if (y == N - 1 && x == M - 1) return 1;
